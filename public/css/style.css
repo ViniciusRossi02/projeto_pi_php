@@ -34,12 +34,12 @@ ul {
   padding: 20px;
 }
 
-.menu-logo a {
-  font-size: 1.8em;
+.navbar-brand {
   color: #ff6a00;
   font-weight: bold;
   text-decoration: none;
 }
+
 
 .menu-nav ul {
   display: flex;
@@ -300,4 +300,14 @@ ul {
 .footer p {
   font-size: 1.1em;
   font-weight: bold;
+}
+
+.imgDashboard {
+  max-width: 1000px; /* Defina o tamanho máximo desejado, por exemplo, 800px ou outro valor menor */
+  width: 100%; /* Garante que a imagem seja responsiva */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Essencial para que margin: 0 auto funcione */
+  margin: auto; /* Centraliza a imagem horizontalmente */
+  border-radius: 15px; /* Adiciona um leve arredondamento nas bordas, se desejar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil, se desejar */
 }
