@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="/projeto_pi_php/public/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="http://localhost/projeto_pi_php/public/css/style.css" />
+    <style>
+        label {
+            color: #ff6a00;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,8 +39,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastro.php">Cadastro de usuario</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/login.php">Login</a>
+                    </li>
                 </ul>
-                <form class="form-inline">
+                <form class="form-inline" method="post">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
@@ -49,8 +57,8 @@
             <form class="row g-3">
 
                 <div class="col-md-6">
-                    <label for="inputName" class="form-label" style="color: #ff6a00;">Nome</label>
-                    <input style="background-color: gray; color:#ff6a00;" type="text" class="form-control" id="inputaNome" name="nome">
+                    <label for="inputName" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="inputaNome" name="nome">
                 </div>
 
                 <div class="col-md-6">
@@ -142,7 +150,7 @@
                 </div>
 
                 <div class="container button mt-3" style="display: flex; justify-content:space-between;">
-                    <a href="/projeto_pi_php/app/Views/home.php" style="text-decoration:none;">Voltar</a>
+                    <a href="/projeto_pi_php/app/Views/home.php" style="text-decoration:none;"><button class="btn btn-primary">Voltar</button></a>
 
 
                     <button type="reset" class="btn btn-secondary">Limpar</button>

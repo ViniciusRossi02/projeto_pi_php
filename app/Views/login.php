@@ -34,6 +34,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastro.php">Cadastro de usuario</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/login.php">Login</a>
+                    </li>
                 </ul>
                 <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -50,11 +53,11 @@
 
                 <div class="col-md-12">
                     <label for="inputEmail" class="form-label" style="color: #ff6a00;">Email</label>
-                    <input  type="e-mail" placeholder="Digite seu e-mail" class="form-control" id="inputaEmail" name="email">
+                    <input type="e-mail" placeholder="Digite seu e-mail" class="form-control" id="inputaEmail" name="email">
                 </div>
                 <div class="col-md-12">
                     <label for="inputSenha" class="form-label" style="color: #ff6a00;">Senha</label>
-                    <input  type="password" placeholder="Digite sua senha" class="form-control" id="inputaSenha" name="senha">
+                    <input type="password" placeholder="Digite sua senha" class="form-control" id="inputaSenha" name="senha">
                 </div>
                 <div><button class="btn btn-danger mt-3  col-md-12">Entrar</button></div>
                 <div><button class="btn btn-light col-md-12">Recuperar Senha</button></div>
