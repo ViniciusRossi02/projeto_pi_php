@@ -50,11 +50,11 @@
 
                 <div class="col-md-12">
                     <label for="inputEmail" class="form-label" style="color: #ff6a00;">Email</label>
-                    <input style="background-color: gray; color: #ff6a00;" type="e-mail" placeholder="Digite seu e-mail" class="form-control" id="inputaEmail" name="email">
+                    <input  type="e-mail" placeholder="Digite seu e-mail" class="form-control" id="inputaEmail" name="email">
                 </div>
                 <div class="col-md-12">
                     <label for="inputSenha" class="form-label" style="color: #ff6a00;">Senha</label>
-                    <input style="background-color: gray; color: #ff6a00;" type="password" placeholder="Digite sua senha" class="form-control" id="inputaSenha" name="senha">
+                    <input  type="password" placeholder="Digite sua senha" class="form-control" id="inputaSenha" name="senha">
                 </div>
                 <div><button class="btn btn-danger mt-3  col-md-12">Entrar</button></div>
                 <div><button class="btn btn-light col-md-12">Recuperar Senha</button></div>
