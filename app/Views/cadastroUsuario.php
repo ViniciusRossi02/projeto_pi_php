@@ -37,10 +37,13 @@
                         <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/listagem.php">Lista de usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastro.php">Cadastro de usuario</a>
+                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastroUsuario.php">Cadastro de usuario</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/login.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastroProdutos.php">Cadastro de Produtos</a>
                     </li>
                 </ul>
                 <form class="form-inline" method="post">

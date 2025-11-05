@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Rossi FutStore</title>
-    <link rel="stylesheet" href="/projeto_pi_php/public/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="http://localhost/projeto_pi_php/public/css/style.css" />
 </head>
 
 <body>
+
     <header class="menu-bg;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">RossiFutStore</a>
@@ -49,28 +48,38 @@
         </nav>
     </header>
 
-    <section class="container" style="max-width: 480px; padding: 5px;">
-        <div class="container p-3 mt-3 mb-3 border rounded">
-            <form class="row g-3">
-                <h2 style="color: #ff6a00; display: flex; justify-content: center;">Login</h2>
-
-                <div class="col-md-12">
-                    <label for="inputEmail" class="form-label" style="color: #ff6a00;">Email</label>
-                    <input type="e-mail" placeholder="Digite seu e-mail" class="form-control" id="inputaEmail" name="email">
-                </div>
-                <div class="col-md-12">
-                    <label for="inputSenha" class="form-label" style="color: #ff6a00;">Senha</label>
-                    <input type="password" placeholder="Digite sua senha" class="form-control" id="inputaSenha" name="senha">
-                </div>
-                <div><button class="btn btn-danger mt-3  col-md-12">Entrar</button></div>
-                <div><button class="btn btn-light col-md-12">Recuperar Senha</button></div>
-                <div><button class="btn btn-primary col-md-12">Cadastrar</button></div>
-
+    <section class="container d-flex justify-content-center mt-3" style="max-width: 960px; padding: 5px;">
+        <h1>Cadastro de Produtos</h1>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-    </script>
+    <div class="container d-flex justify-content-center mt-5">
+        <form class="row g-3" style="max-width: 960px;">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label" >Nome</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputQauntidade" class="form-label">quantidade</label>
+                <input type="number" class="form-control" id="inputQauntidade">
+            </div>
+            <div class="col-12">
+                <label for="valorUnitario" class="form-label">Valor unitario</label>
+                <input type="number" class="form-control" id="valorUnitario" placeholder="Ex: 12,99">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Categoria</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Camiseta, shorts, meião...">
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </form>
+
+    </div>
+
+
+
 </body>
 
 </html>
