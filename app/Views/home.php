@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>Rossi FutStore</title>
+    <title> <?= $title?> </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://localhost/projeto_pi_php/public/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css"  />
 </head>
 
 <body>
 
     <header class="menu-bg;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="http://localhost/projeto_pi_php/app/Views/dashBoard.php">RossiFutStore</a>
+            <a class="navbar-brand" href="../projeto_pi_php/app/Views/dashBoard.php">RossiFutStore</a>
 
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
@@ -25,7 +25,7 @@
                         <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/listagem.php">Lista de usuarios</a>
+                        <a class="nav-link" href="../listagem.php">Lista de usuarios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastroUsuario.php">Cadastro de usuario</a>
@@ -52,6 +52,8 @@
             <h1>Sobre</h1>
             <p>A <strong>Rossi FutStore</strong> é apaixonada pelo esporte mais amado do mundo.
                 Nossa missão é oferecer aos torcedores camisas oficiais e licenciadas dos principais clubes do Brasil e do exterior.</p>
+
+            
 
             <p>Com envio rápido para todo o Brasil, promoções exclusivas e atendimento de qualidade,
                 a Rossi FutStore é o lugar certo para vestir a paixão pelo futebol. </p>

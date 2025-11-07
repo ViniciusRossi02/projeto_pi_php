@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rossi FutStore</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/projeto_pi_php/public/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet" />
@@ -14,7 +17,6 @@
 </head>
 
 <body>
-
     <header class="menu-bg;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">RossiFutStore</a>
@@ -47,10 +49,28 @@
         </nav>
     </header>
 
-    <div class="imgDashboard">
-        <?=$content?>
-    </div>
+    <section class="container" style="max-width: 480px; padding: 5px;">
+        <div class="container p-3 mt-3 mb-3 border rounded">
+            <form class="row g-3">
+                <h2 style="color: #ff6a00; display: flex; justify-content: center;">Login</h2>
 
+                <div class="col-md-12">
+                    <label for="inputEmail" class="form-label" style="color: #ff6a00;">Email</label>
+                    <input type="e-mail" placeholder="Digite seu e-mail" class="form-control" id="inputaEmail" name="email">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputSenha" class="form-label" style="color: #ff6a00;">Senha</label>
+                    <input type="password" placeholder="Digite sua senha" class="form-control" id="inputaSenha" name="senha">
+                </div>
+                <div><button class="btn btn-danger mt-3  col-md-12">Entrar</button></div>
+                <div><button class="btn btn-light col-md-12">Recuperar Senha</button></div>
+                <div><button class="btn btn-primary col-md-12">Cadastrar</button></div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

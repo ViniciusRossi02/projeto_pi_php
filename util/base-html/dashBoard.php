@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="http://localhost/projeto_pi_php/public/css/style.css" />
 </head>
 
 <body>
@@ -30,10 +30,13 @@
                         <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/listagem.php">Lista de usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastro.php">Cadastro de usuario</a>
+                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastroUsuario.php">Cadastro de usuario</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/login.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/cadastroProdutos.php">Cadastro de Produtos</a>
                     </li>
                 </ul>
                 <form class="form-inline">
@@ -43,6 +46,11 @@
             </div>
         </nav>
     </header>
+
+    <div class="imgDashboard">
+        <img src="http://localhost/projeto_pi_php/public/imgs/imgdashboard.png" alt="LOGO">
+    </div>
+
 </body>
 
 </html>
