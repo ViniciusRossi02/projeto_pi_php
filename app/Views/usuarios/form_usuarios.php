@@ -13,6 +13,16 @@
                     <input type="email" class="form-control" id="inputEmail" name="email">
                 </div>
 
+                <div class="col-md-6">
+                    <label for="inputSenha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="inputSenha" name="inputSenha">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputConfirmSenha" class="form-label">Confirmar Senha:</label>
+                    <input type="password" class="form-control" id="inputConfirmSenha" name="inputConfirmSenha">
+                </div>
+
                 <div class="col-3">
                     <label for="inputCelular" class="form-label">Celular</label>
                     <input type="number" class="form-control" id="inputCelular" placeholder="14-999999999" name="telefone">

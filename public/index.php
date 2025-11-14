@@ -2,6 +2,8 @@
 // IMPORTA O AUTLOAD DO COMPOSER PARA CARREGAR AS ROTAS
 require __DIR__ .'/../vendor/autoload.php';
 
+USE App\Controllers\UsuarioController;
+
 function render($view, $data = []) {
     // Extrai os dados para a variavel
     extract($data);
@@ -36,7 +38,10 @@ if ($url == "/" || $url == "/index.php"){
 }
 //USUARIOS
 else if($url == "/usuarios") {
-    render('usuarios/lista-usuarios.php', ['title' => 'Lista de usuarios' ]);
+    // render('usuarios/lista_usuarios.php', ['title' => 'Lista de usuarios' ]);
+    // Cria uma instância do Controller e chama a função listar
+    $controller = new UsuarioController();
+    $controller->listar();
 }
 else if($url == "/usuarios/inserir") {
     render('usuarios/form_usuarios.php', ['title' => 'Cadastrar Usuarios' ]);
@@ -44,5 +49,15 @@ else if($url == "/usuarios/inserir") {
 //PRODUTOS
 else if($url == "/cadastro") {
     render('cadastro/cadastroProdutos.php', ['title' => 'Cadastro de produtos' ]);
+}
+else if($url == "/cadastro/lista") {
+    render('cadastro/listaProdutos.php', ['title' => 'Lista de produtos' ]);
+}
+//HOME 
+else if($url == "/home") {
+    render('home/home.php', ['title' => 'Home' ]);
+}
+else if($url == "/login") {
+    render('login/login.php', ['title' => 'Login' ]);
 }
 ?>

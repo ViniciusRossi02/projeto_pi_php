@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/">Home</a>
+                        <a class="nav-link" href="/home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/usuarios">Listar usuarios</a>
@@ -34,7 +34,7 @@
                         <a class="nav-link" href="/usuarios/inserir">Cadastro de usuario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost/projeto_pi_php/app/Views/login.php">Login</a>
+                        <a class="nav-link" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/cadastro">Cadastro de Produtos</a>
