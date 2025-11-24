@@ -41,6 +41,9 @@ class Produto
             $stmt = $pdo->prepare($sql);
 
             $stmt->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
+            $stmt->bindParam(':quantidade', $dados['quantidade'], PDO::PARAM_INT);
+            $stmt->bindParam(':valor_unitario', $dados['valor_unitario']); // DECIMAL não usa PARAM_INT
+            $stmt->bindParam(':categoria', $dados['categoria'], PDO::PARAM_STR);
 
             $stmt->execute();
         } catch (PDOException $e) {

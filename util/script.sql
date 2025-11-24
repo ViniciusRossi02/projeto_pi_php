@@ -25,7 +25,7 @@ CREATE TABLE usuarios (
 );
 
 CREATE TABLE produtos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_produto BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     quantidade INT NOT NULL,
     valor_unitario DECIMAL(10,2) NOT NULL,

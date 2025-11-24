@@ -6,7 +6,7 @@
         <form class="row g-3" style="max-width: 960px;">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label" >Nome</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <input type="text" class="form-control" id="inputEmail4">
             </div>
             <div class="col-md-6">
                 <label for="inputQauntidade" class="form-label">quantidade</label>

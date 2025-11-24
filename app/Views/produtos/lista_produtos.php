@@ -31,13 +31,12 @@
             
             <tbody>
              <?php foreach($produtos as $p): ?>
-
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>10</td>
-                    <td>20.00</td>
-                    <td>Camiseta</td>
+                    <th scope="row"><?= $p["id_produto"] ?></th>
+                    <td><?= $p["nome"] ?></td>
+                    <td><?= $p["quantidade"] ?></td>
+                    <td><?= $p["valor_unitario"] ?></td>
+                    <td><?= $p["categoria"] ?></td>
                     <td>
                         <div class="d-flex justify-content-center gap-2">
                             <a href="#" class="btn btn-info btn-sm">Ver</a>
@@ -46,7 +45,7 @@
                         </div>
                     </td>
                 </tr>
-
+            <?php endforeach; ?>
                
             </tbody>
         </table>
@@ -56,10 +55,6 @@
         <a href="/cadastro"><button
                 type="submit" class="btn btn-success">Adicionar</button></a>
     </div>
-
-
-
-
 
 </body>
 

@@ -40,6 +40,19 @@ Class Usuario{
 
             // Pasa as variaveis para o SQL
             $stmt->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
+             $stmt->bindParam(':nome', $dados['nome']);
+            $stmt->bindParam(':cpf', $dados['cpf']);
+            $stmt->bindParam(':data_nascimento', $dados['data_nascimento']);
+            $stmt->bindParam(':celular', $dados['celular']);
+            $stmt->bindParam(':rua', $dados['rua']);
+            $stmt->bindParam(':numero', $dados['numero']);
+            $stmt->bindParam(':complemento', $dados['complemento']);
+            $stmt->bindParam(':cidade', $dados['cidade']);
+            $stmt->bindParam(':cep', $dados['cep']);
+            $stmt->bindParam(':estado', $dados['estado']);
+            $stmt->bindParam(':email', $dados['email']);
+            $stmt->bindParam(':nivel_acesso', $dados['nivel_acesso']);
+            $stmt->bindParam(':senha', $senha_criptografada); // senha já criptografada
 
         }catch(PDOException $e){
             echo "Erro ao inserir: ". $e->getMessage();
