@@ -37,7 +37,10 @@
                         <a class="nav-link" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cadastro">Cadastro de Produtos</a>
+                        <a class="nav-link" href="/produtos">Cadastro de Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/produtos/inserir">Listar Produtos</a>
                     </li>
                 </ul>
                 <form class="form-inline">

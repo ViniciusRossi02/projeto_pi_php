@@ -1,10 +1,12 @@
 <?php
 // IMPORTA O AUTLOAD DO COMPOSER PARA CARREGAR AS ROTAS
-require __DIR__ .'/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-USE App\Controllers\UsuarioController;
+use App\Controllers\UsuarioController;
+use App\Controllers\ProdutoController;
 
-function render($view, $data = []) {
+function render($view, $data = [])
+{
     // Extrai os dados para a variavel
     extract($data);
     ob_start();
@@ -15,7 +17,8 @@ function render($view, $data = []) {
     require __DIR__ . '/../app/Views/layouts/base.php';
 }
 
-function render_sem_template($view, $data = []) {
+function render_sem_template($view, $data = [])
+{
     // Extrai os dados para a variavel
     extract($data);
     ob_start();
@@ -28,36 +31,37 @@ function render_sem_template($view, $data = []) {
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // Navegação geral
-if ($url == "/" || $url == "/index.php"){
-   render_sem_template('home.php' , [
-    'title' => 'Bem-vindo!' ,
-    'lenda' => 'Sou uma lenda do php!' 
-]);
-}else if($url == "/sobre") {
-    render('sobre.php', ['title' => 'Sobre a página!' ]);
+if ($url == "/" || $url == "/index.php") {
+    render_sem_template('home.php', [
+        'title' => 'Bem-vindo!',
+        'lenda' => 'Sou uma lenda do php!'
+    ]);
+} else if ($url == "/sobre") {
+    render('sobre.php', ['title' => 'Sobre a página!']);
 }
+
 //USUARIOS
-else if($url == "/usuarios") {
+else if ($url == "/usuarios") {
     // render('usuarios/lista_usuarios.php', ['title' => 'Lista de usuarios' ]);
     // Cria uma instância do Controller e chama a função listar
     $controller = new UsuarioController();
     $controller->listar();
+} else if ($url == "/usuarios/inserir") {
+    render('usuarios/form_usuarios.php', ['title' => 'Cadastrar Usuarios']);
 }
-else if($url == "/usuarios/inserir") {
-    render('usuarios/form_usuarios.php', ['title' => 'Cadastrar Usuarios' ]);
-}
+
 //PRODUTOS
-else if($url == "/cadastro") {
-    render('cadastro/cadastroProdutos.php', ['title' => 'Cadastro de produtos' ]);
-}
-else if($url == "/cadastro/lista") {
-    render('cadastro/listaProdutos.php', ['title' => 'Lista de produtos' ]);
+else if ($url == "/produtos") {
+    // render('produtos/form_produtos.php', ['title' => 'Cadastro de produtos' ]);
+    // Cria uma instância do Controller e chama a função listar
+    $controller = new ProdutoController();
+    $controller->listar();
+} else if ($url == "/produtos/inserir") {
+    render('produtos/form_produtos.php', ['title' => 'Cadastro de produtos']);
 }
 //HOME 
-else if($url == "/home") {
-    render('home/home.php', ['title' => 'Home' ]);
+else if ($url == "/home") {
+    render('home/home.php', ['title' => 'Home']);
+} else if ($url == "/login") {
+    render('login/login.php', ['title' => 'Login']);
 }
-else if($url == "/login") {
-    render('login/login.php', ['title' => 'Login' ]);
-}
-?>

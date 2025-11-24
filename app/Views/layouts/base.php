@@ -28,16 +28,19 @@
                         <a class="nav-link" href="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/usuarios">Listar usuarios</a>
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/usuarios">Lista de usuarios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/usuarios/inserir">Cadastro de usuario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
+                        <a class="nav-link" href="/produtos">Lista de Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cadastro">Cadastro de Produtos</a>
+                        <a class="nav-link" href="/produtos/inserir">Cadastro de Produtos</a>
                     </li>
                 </ul>
                 <form class="form-inline">

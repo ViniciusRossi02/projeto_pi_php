@@ -4,6 +4,7 @@
 namespace App\Models;
 
 USE PDO;
+USE PDOException;
 USE App\Core\Database;
 
 // Mesmo nome do arquivo 
@@ -40,7 +41,7 @@ Class Usuario{
             // Pasa as variaveis para o SQL
             $stmt->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
 
-        }catch(PODException $e){
+        }catch(PDOException $e){
             echo "Erro ao inserir: ". $e->getMessage();
             exit;
         }
