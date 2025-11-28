@@ -1,7 +1,9 @@
+
     <section class="container mt-3" style="max-width: 960px; padding: 5px;">
         <h1 style="color:rgb(255, 249, 245);">Cadastro de Usuários</h1>
         <div class="container p-3 mt-3 mb-3 border rounded">
-            <form class="row g-3">
+
+            <form action="/usuarios/salvar"  method="POST" class="row g-3">
 
                 <div class="col-md-6">
                     <label for="inputName" class="form-label">Nome</label>
@@ -25,7 +27,7 @@
 
                 <div class="col-3">
                     <label for="inputCelular" class="form-label">Celular</label>
-                    <input type="number" class="form-control" id="inputCelular" placeholder="14-999999999" name="telefone">
+                    <input type="number" class="form-control" id="inputCelular" placeholder="14-999999999" name="celular">
                 </div>
                 <div class="col-3">
                     <label for="inputDataNascimento" class="form-label">Data de Nascimento</label>
@@ -38,12 +40,12 @@
                 </div>
                 <!-- fazer com check: procurar no github -->
                 <div class="col-md-3">
-                    <label for="inputNvAcesso" class="form-label">Nivel de Acesso</label>
-                    <select class="form-select" id="inputNvAcesso" name="nvAcesso">
+                    <label for="nivel_acesso" class="form-label">Nivel de Acesso</label>
+                    <select class="form-select" id="nivel_acesso" name="nivel_acesso">
                         <option value="Selecione seu estado" selected disabled>-- Escolha -- </option>
-                        <option value="admin">Admin</option>
-                        <option value="user">User</option>
-                        <option value="cliente">Cliente</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Funcionário">Funcionário</option>
+                        <option value="Cliente">Cliente</option>
                     </select>
                 </div>
 
@@ -118,6 +120,7 @@
             </form>
         </div>
     </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">

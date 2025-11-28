@@ -1,4 +1,6 @@
 <?php
+
+session_start(); // Inicia sessão
 // IMPORTA O AUTLOAD DO COMPOSER PARA CARREGAR AS ROTAS
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -48,6 +50,9 @@ else if ($url == "/usuarios") {
     $controller->listar();
 } else if ($url == "/usuarios/inserir") {
     render('usuarios/form_usuarios.php', ['title' => 'Cadastrar Usuarios']);
+}else if ($url == "/usuarios/salvar" && $_SERVER['REQUEST_METHOD'] == 'POST'){ //VEREFICA ALEM DA RITA O TIPO DE PEDIDO
+    $controller = new UsuarioController();
+    $controller->salvar();
 }
 
 //PRODUTOS
@@ -64,4 +69,4 @@ else if ($url == "/home") {
     render('home/home.php', ['title' => 'Home']);
 } else if ($url == "/login") {
     render('login/login.php', ['title' => 'Login']);
-}
+} 

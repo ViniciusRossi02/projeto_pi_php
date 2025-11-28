@@ -38,21 +38,26 @@ Class Usuario{
             //  PREPARA O SQL para ser inserido no BD e limpa codigos maliciosos
             $stmt = $pdo->prepare($sql);
 
-            // Pasa as variaveis para o SQL
+            // Pasa as variaveis para o SQL             PDO é uma proteção 
             $stmt->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
-             $stmt->bindParam(':nome', $dados['nome']);
-            $stmt->bindParam(':cpf', $dados['cpf']);
+            $stmt->bindParam(':senha', $senha_criptografada);  // senha já criptografada
+            $stmt->bindParam(':cpf', $dados['cpf'], PDO::PARAM_STR);
             $stmt->bindParam(':data_nascimento', $dados['data_nascimento']);
-            $stmt->bindParam(':celular', $dados['celular']);
-            $stmt->bindParam(':rua', $dados['rua']);
-            $stmt->bindParam(':numero', $dados['numero']);
-            $stmt->bindParam(':complemento', $dados['complemento']);
-            $stmt->bindParam(':cidade', $dados['cidade']);
-            $stmt->bindParam(':cep', $dados['cep']);
-            $stmt->bindParam(':estado', $dados['estado']);
-            $stmt->bindParam(':email', $dados['email']);
-            $stmt->bindParam(':nivel_acesso', $dados['nivel_acesso']);
-            $stmt->bindParam(':senha', $senha_criptografada); // senha já criptografada
+            $stmt->bindParam(':celular', $dados['celular'], PDO::PARAM_STR);
+            $stmt->bindParam(':rua', $dados['rua'], PDO::PARAM_STR);
+            $stmt->bindParam(':numero', $dados['numero'], PDO::PARAM_STR);
+            $stmt->bindParam(':complemento', $dados['complemento'], PDO::PARAM_STR);
+            $stmt->bindParam(':cidade', $dados['cidade'], PDO::PARAM_STR);
+            $stmt->bindParam(':cep', $dados['cep'], PDO::PARAM_STR);
+            $stmt->bindParam(':estado', $dados['estado'], PDO::PARAM_STR);
+            $stmt->bindParam(':email', $dados['email'], PDO::PARAM_STR);
+            $stmt->bindParam(':nivel_acesso', $dados['nivel_acesso'], PDO::PARAM_STR);
+
+            // Executa o SQL
+            $stmt->execute();
+            
+            // Retorna o ID de registro do Banco de Dados
+            return(int) $pdo -> lastInsertId();
 
         }catch(PDOException $e){
             echo "Erro ao inserir: ". $e->getMessage();

@@ -15,5 +15,16 @@ class ProdutoController{
             'produtos' => $lista_produtos 
         ]);
     }
+
+    public function salvar() {
+        // 1. Limpar e capturar dados do formulário
+        $dados = [
+            'nome'           => filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+            'quantidade'     => filter_input(INPUT_POST, 'quantidade', FILTER_SANITIZE_NUMBER_INT),
+            'valor_unitario' => filter_input(INPUT_POST, 'valor_unitario', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION),
+            'categoria'      => filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_FULL_SPECIAL_CHARS)
+        ];
+    }
+
 }
 ?>

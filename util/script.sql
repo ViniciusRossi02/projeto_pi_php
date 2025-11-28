@@ -1,10 +1,10 @@
-CREATE DATABASE rossi_fut_store
+CREATE DATABASE IF NOT EXISTS rossi_fut_store
 CHARACTER SET utf8mb4   
 COLLATE utf8mb4_unicode_ci;
 
 USE rossi_fut_store;
 
-CREATE TABLE usuarios (
+CREATE TABLE IF NOT EXISTS usuarios (
     id_usuario BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY, -- identificador único
     nome VARCHAR(255) NOT NULL, -- nome completo do usuário
     cpf VARCHAR(14), -- CPF no formato 000.000.000-00
@@ -24,7 +24,7 @@ CREATE TABLE usuarios (
     deleted_at TIMESTAMP NULL DEFAULT NULL -- marcação de exclusão lógica
 );
 
-CREATE TABLE produtos (
+CREATE TABLE IF NOT EXISTS produtos (
     id_produto BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     quantidade INT NOT NULL,
@@ -34,5 +34,8 @@ CREATE TABLE produtos (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- data de alteração
     deleted_at TIMESTAMP NULL DEFAULT NULL -- marcação de exclusão lógica
 );
+
+INSERT INTO produtos (nome, quantidade, valor_unitario, categoria)
+VALUES ('Camisa Oficial Flamengo 2024', 50, 349.90, 'Camisas de Time');
 
 

@@ -46,6 +46,7 @@ class Produto
             $stmt->bindParam(':categoria', $dados['categoria'], PDO::PARAM_STR);
 
             $stmt->execute();
+
         } catch (PDOException $e) {
             echo "Erro ao inserir: " . $e->getMessage();
             exit;
