@@ -52,7 +52,7 @@
     </div>
 
     <div class="col-12 text-center">
-        <a href="/cadastro"><button
+        <a href="/produtos/inserir"><button
                 type="submit" class="btn btn-success">Adicionar</button></a>
     </div>
 

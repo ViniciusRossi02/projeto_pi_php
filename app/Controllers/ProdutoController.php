@@ -24,6 +24,28 @@ class ProdutoController{
             'valor_unitario' => filter_input(INPUT_POST, 'valor_unitario', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION),
             'categoria'      => filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_FULL_SPECIAL_CHARS)
         ];
+
+         $erros = [];
+
+        // Verifica se  o nome está vazio
+        if (empty($dados['nome'])) {
+            $erros = ['nome' => 'O campo NOME não pode ficar em branco!']; 
+        } else if (strlen($dados['nome']) < 4){  // Verifica se o nome tem menos de 4 letras
+            $erros [] = 'O campo nome deve ter mais que 3 caracteres!';
+        } 
+
+        // Se não houver erros, salva 
+        if (empty($erros)){
+            $id = Produto::salvar($dados);
+            header('Location: /produtos');
+        } else {
+            // Se houver erros, volta para o formulário
+            $_SESSION['erros'] = $erros;
+            $_SESSION['dados'] = $dados;
+            
+            header('Location: /produtos/inserir');
+
+        }
     }
 
 }

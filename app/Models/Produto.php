@@ -47,6 +47,9 @@ class Produto
 
             $stmt->execute();
 
+             // Retorna o ID de registro do Banco de Dados
+            return(int) $pdo -> lastInsertId();
+
         } catch (PDOException $e) {
             echo "Erro ao inserir: " . $e->getMessage();
             exit;

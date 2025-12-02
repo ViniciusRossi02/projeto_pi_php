@@ -44,7 +44,7 @@
                     <select class="form-select" id="nivel_acesso" name="nivel_acesso">
                         <option value="Selecione seu estado" selected disabled>-- Escolha -- </option>
                         <option value="Administrador">Administrador</option>
-                        <option value="Funcionário">Funcionário</option>
+                        <option value="Funcionario">Funcionário</option>
                         <option value="Cliente">Cliente</option>
                     </select>
                 </div>

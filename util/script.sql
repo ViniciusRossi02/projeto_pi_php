@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     cep VARCHAR(10), -- CEP
     estado VARCHAR(255), -- estado (ex: SP, RJ)
     email VARCHAR(255) NOT NULL, -- e-mail válido
-    nivel_acesso ENUM('Administrador', 'Funcionário', 'Cliente') NOT NULL, -- tipo de usuário
+    nivel_acesso ENUM('Administrador', 'Funcionario', 'Cliente') NOT NULL, -- tipo de usuário
     senha VARCHAR(255) NOT NULL, -- senha criptografada
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- data de criação
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- data de alteração

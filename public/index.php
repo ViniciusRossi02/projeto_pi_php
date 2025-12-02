@@ -63,7 +63,13 @@ else if ($url == "/produtos") {
     $controller->listar();
 } else if ($url == "/produtos/inserir") {
     render('produtos/form_produtos.php', ['title' => 'Cadastro de produtos']);
+}else if ($url == "/produtos/salvar" && $_SERVER['REQUEST_METHOD'] == 'POST'){
+    $controller = new ProdutoController();
+    $controller->salvar();
 }
+
+
+
 //HOME 
 else if ($url == "/home") {
     render('home/home.php', ['title' => 'Home']);
